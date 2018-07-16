@@ -46,6 +46,7 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 COPY h5bp /etc/nginx/h5bp
 COPY default /etc/nginx/sites-available/default
 COPY php-fpm.conf /etc/php/7.2/fpm/php-fpm.conf
+COPY php.ini /etc/php/7.2/fpm/php.ini
 COPY xdebug.ini /etc/php/7.2/mods-available/xdebug.ini
 
 EXPOSE 80

@@ -117,11 +117,13 @@ if [ $# -gt 0 ]; then
 
     # Start up containers
     elif [ "$1" == "start" ]; then
-        $COMPOSE up -d
+        shift 1
+        $COMPOSE up -d "$@"
 
     # Stop the containers
     elif [ "$1" == "stop" ]; then
-        $COMPOSE down
+        shift 1
+        $COMPOSE down "$@"
 
     # If "art" is used, pass-thru to "artisan"
     # inside a new container

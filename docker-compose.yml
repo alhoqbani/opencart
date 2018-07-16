@@ -11,6 +11,7 @@ services:
       CONTAINER_ENV: "${APP_ENV:-local}"
       XDEBUG_HOST: "${XDEBUG_HOST}"
       WWWUSER: "${WWWUSER}"
+      PHP_INI_SCAN_DIR: "/etc/php/7.2/fpm/conf.d:/var/www/html/upload"
     volumes:
      - .:/var/www/html
     networks:
